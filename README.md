@@ -1,0 +1,1 @@
+# stm32g0b1cbt6_dev
