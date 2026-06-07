@@ -11,6 +11,10 @@
 #include "app_uart_cmd.h"
 
 // --------------------------------------------------------------------------
+// [コンパイルスイッチ]
+#define DBG_APP
+
+// --------------------------------------------------------------------------
 static app_uart_cmd_config_t s_cmd_config;
 static uint8_t s_led_state = 0;
 static void _rtc_update(void);
@@ -51,7 +55,7 @@ static void _rtc_update(void)
     HAL_RTC_GetTime(&hrtc, &stimestructureget, RTC_FORMAT_BIN);
     HAL_RTC_GetDate(&hrtc, &sdatestructureget, RTC_FORMAT_BIN);
 
-#if 0
+#if 1
     static uint8_t s_prev_seconds;
 
     if(s_prev_seconds != stimestructureget.Seconds) {

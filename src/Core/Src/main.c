@@ -111,6 +111,9 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    app_main(); // アプリメイン
+
+    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }
